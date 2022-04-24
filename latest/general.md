@@ -1,54 +1,55 @@
 # General
 
-`audioExtSoundClear()`
-`audioExtSoundExists`
-`audioExtSoundGet`
-audioExtSoundGetSoundID
-audioExtIsLoaded
-audioExtSoundLoad
-audioExtSoundRemove
-audioExtSoundUnload
-audioExtSoundUnloadAll()
+### `Collage(width, height, [crop], [separation], [identifier])`
 
-### `audioExtOggAddStream(filePath, [preload], [alias])`
-
-Returns: struct or `undefined`.
+Returns: struct, an instance of `Collage`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|filePath|string|Path to load file.|
-|[preload]|boolean|Defaults to false. Adds an entry but doesn't actually load in the file.|
-|[alias]|string|Defaults to the name of the file (excluding the extension).|
+|`width`|real|Width of the texture page.|
+|`height`|real|Height of the texture page.|
+|`crop`|boolean|Whether to crop every image.|
+|`separation`|real|How many pixels should images be spaced apart.|
+|`identifier`|strimg|Name of the texture page.|
 
-Adds the ogg file as a sound source from a filename. Since ogg files are streamed, they need to remain on disk.
+Constructor, creates a new instance of `Collage` to be used for building texture pages.
 
-### `audioExtOggScan(filePath, [preload])`
+### `CollageIsPowerTwo(number)`
 
-Returns: N/A (`undefined`).
-
-|Name|Datatype|Purpose|
-|---|---|---|
-|filePath|buffer|Path to scan for ogg files.|
-|[preload]|boolean|Defaults to false. Adds an entry but doesn't actually load in the file.|
-
-Scans all of the files within the chosen filePath and loads in any ogg files.
-
-### `audioExtWavOggNames()`
-
-Returns: array.
+Returns: `boolean`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|N/A|||
+|`number`|real|Number to check if power of two.|
 
-Gets the name of all of the ogg files from the database.
+Determines whether the number passed is a valid power of two.
 
-### `audioExtOggRemove(audioName)`
+### `CollageConvertPowerTwo(number)`
 
-Returns: N/A (`undefined`).
+Returns: `real`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|audioName|string|Name of audio file.|
+|`number`|real|Number to convert to power of two|
 
-Removes the string specified by the audioName from the ogg database.
+Converts a number to the nearest power of two.
+
+### `CollageSterlizeGPUState()`
+
+Returns: `N/A`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`N/A`|||
+
+Sterlizes the GPU states, matrices and shader, preparing for adding onto a texture page as is.
+
+### `CollageRestoreGPUState()`
+
+Returns: `N/A`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`N/A`|
+
+Restores the GPU states, matrices and shader from `CollageSterlizeGPUState()`.

@@ -1,3 +1,4 @@
 <!-- _navbar.md -->
 
-- [Test](https://tabelf.link/)
+- [Support me](https://ko-fi.com/tabularelf)
+- [Report an issue](https://github.com/tabularelf/Collage/issues)

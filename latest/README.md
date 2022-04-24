@@ -1,29 +1,27 @@
-﻿# Home
----
-<center>
-<p>External audio manager libray for GMS 2.3.1+<br>
+﻿<center>
+<p>Texture Page Builder for GameMaker.<br>
 
-[Download the latest .yymp here!](https://github.com/tabularelf/audioExt/releases)
+[Download the latest .yymp here!](https://github.com/tabularelf/Collage/releases)
 
 </center>
 
 ---
 
-audioExt is designed to ease external audio assets management without
-
+Collage is a Texture Page Builder and image manager, built from the ground up to mimic GameMaker's texture page packing, while offer a lot of flexibility.
 
 # Features
 
-- Managemnt of wav and ogg files.
-- An internal database to keep track of all of the audio entries, so you don't have to.
-- Supports loading/unloading audio assets, without removing their entries directly.
+- Packing images together onto multiple texture pages.
+- Matching power of two constraints, to ensure that you're not making odd texture page sizes.
+- On the fly sprite live-reloading. (With some catches.)
+- Lots of configurability!
 
 # Supported Platforms
 
 |  Windows  |  MacOSX  |  Linux  |  iOS  |  Android  |  HTML5  |  Opera GX  |  Console  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ | ✔ |
+| ✔ | ✔ | ✔ | ✔ | ✔ | ❓ | ✔ | ✔ |
 
 # License
 
-audioExt is under the [MIT License](https://github.com/tabularelf/audioExt/blob/main/LICENSE).
+Collage is under the [MIT License](https://github.com/tabularelf/Collage/blob/main/LICENSE).
