@@ -42,7 +42,7 @@
   - [CollageGetImageUVs(identifier, subImage)](image.md#collagegetimageuvsidentifier-subimage)
   - [CollageGetImageTexture(identifier, subImage)](image.md#collagegetimagetextureidentifier-subimage)
   - [CollageGetImagePage(identifier, subImage)](image.md#collagegetimagepageidentifier-subimage)
-- [Rendering](Rendering.md)
+- [Rendering](rendering.md)
   - [draw_image(sprite_index/image, image_index, x, y)](rendering.md#draw_imagesprite_indeximage-image_index-x-y)
   - [draw_image_ext(sprite_index/image, image_index, x, y, xscale, yscale, rot, col, alpha)](rendering.md#draw_image_extsprite_indeximage-image_index-x-y-xscale-yscale-rot-col-alpha)
   - [CollageDrawImage(image, image_index, x, y)](rendering.md#collagedrawimageimage-image_index-x-y)
