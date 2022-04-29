@@ -12,7 +12,7 @@ Returns: struct, an instance of `Collage`.
 |`separation`|real|How many pixels should images be spaced apart.|
 |`identifier`|strimg|Name of the texture page.|
 
-Constructor, creates a new instance of `Collage` to be used for building texture pages. If `identifier` was passed, Collage will assign itself to a global database and can be used with `CollageGet()` to retrieve said Collage instance.
+Constructor, creates a new instance of `Collage` to be used for building texture pages.
 
 ### `CollageIsPowerTwo(number)`
 
