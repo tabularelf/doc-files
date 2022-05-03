@@ -1,6 +1,6 @@
 # General
 
-### `Collage(width, height, [crop], [separation], [identifier])`
+### `Collage([width], [height], [crop], [separation], [identifier])`
 
 Returns: struct, an instance of `Collage`.
 
@@ -50,6 +50,6 @@ Returns: `N/A`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|
+|`N/A`|||
 
 Restores the GPU states, matrices and shader from `CollageSterlizeGPUState()`.

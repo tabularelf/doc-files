@@ -35,16 +35,27 @@ Returns: `struct`.
 
 Loads in an image from cache memory.
 
-### `CollageGetImageUVs(identifier, subImage)`
+### `CollageGetImageUVs(identifier, image_index)`
 
-Returns: `struct`.
+Returns: instance of `__CollageImageUVsClass`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`identifier`|string/image|Name of image.|
-|`subImage`|real|Subimage of image.|
+|`identifier`|string/image|Name of image|
+|`image_index`|real|subimage of image|
 
-Gets the UV coordinates of an image.
+Returns the UV struct of an image.
+
+### `CollageCompatibilityGetImageUVs(identifier, image_index)`
+
+Returns: `array`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`identifier`|string/image|Name of image|
+|`image_index`|real|subimage of image|
+
+Returns an array of UV data that is setup similarily to how GMSprite `sprite_get_uvs()` works.
 
 ### `CollageGetImageTexture(identifier, subImage)`
 
@@ -68,13 +79,13 @@ Returns: `__CollageTexturePageClass`.
 
 Gets the `__CollageTexturePageClass` of an image.
 
-### `CollageGetImageTexturePage(identifier, subImage)`
+### `CollageGetImageSurface(identifier, subImage)`
 
-Returns: `__CollageTexturePageClass`.
+Returns: `surfaceID`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
 |`identifier`|string/image|Name of image.|
 |`subImage`|real|Subimage of image.|
 
-Gets the surfaceID of an image.
+Gets the surfaceID of an images texture page.

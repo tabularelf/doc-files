@@ -1,6 +1,6 @@
 # Collage Methods
 
-### `.startBatch()`
+### `.StartBatch()`
 
 Returns: `N/A`.
 
@@ -10,7 +10,7 @@ Returns: `N/A`.
 
 Tells Collage to batch images instead of building right away.
 
-### `.finishBatch()`
+### `.FinishBatch()`
 
 Returns: `N/A`.
 
@@ -20,7 +20,7 @@ Returns: `N/A`.
 
 Tells Collage that it's done batching images and to start building.
 
-### `.clearBatch()`
+### `.ClearBatch()`
 
 Returns: `N/A`.
 
@@ -30,7 +30,7 @@ Returns: `N/A`.
 
 Tells Collage to clear the list of images.
 
-### `.addFile(filepath, [identifier], [subimages], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
+### `.AddFile(filepath, [identifier], [subimages], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
 
 Returns: `N/A`.
 
@@ -47,7 +47,7 @@ Returns: `N/A`.
 
 Loads a image and adds it to the texture page. (Note: If `.startBatch()` was called, then images are added to a list until `.finishBatch()` is called.)
 
-### `.addSprite(spriteID, [identifier], [isCopy], [is3D])`
+### `.AddSprite(spriteID, [identifier], [isCopy], [is3D])`
 
 Returns: `N/A`.
 
@@ -60,7 +60,7 @@ Returns: `N/A`.
 
 Marks a sprite as an image and adds it to the texture page. (Note: If `.startBatch()` was called, then images are added to a list until `.finishBatch()` is called.)
 
-### `.addFileStrip(filepath, [identifier], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
+### `.AddFileStrip(filepath, [identifier], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
 
 Returns: `N/A`.
 
@@ -76,7 +76,7 @@ Returns: `N/A`.
 
 Loads a image strip and adds it to the texture page. (Note: If `.startBatch()` was called, then images are added to a list until `.finishBatch()` is called.)
 
-### `.addSurface(surfaceID, [identifier], [x], [y], [width], [height], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
+### `.AddSurface(surfaceID, [identifier], [x], [y], [width], [height], [removeback], [smooth], [xorigin], [yorigin], [is3D])`
 
 Converts a surface into an image and  adds it to the texture page. (Note: If `.startBatch()` was called, then images are added to a list until `.finishBatch()` is called.)
 
@@ -96,7 +96,7 @@ Returns: `N/A`.
 |`yorigin`|real|yoffset of image.  (Default `0`)|
 |`is3D`|boolean|Whether image should have its own texture page, regardless of size. (Default `false`)|
 
-### `.freePages()`
+### `.FreePages()`
 
 Returns: `N/A`.
 
@@ -106,7 +106,7 @@ Returns: `N/A`.
 
 Frees the texture pages (and images).
 
-### `.getPage()`
+### `.GetPage()`
 
 Returns: `N/A`.
 
@@ -116,7 +116,7 @@ Returns: `N/A`.
 
 Frees the texture pages (and images).
 
-### `.getPageCount()`
+### `.GetPageCount()`
 
 Returns: `N/A`.
 
@@ -126,7 +126,7 @@ Returns: `N/A`.
 
 Frees the texture pages (and images).
 
-### `.flushPages()`
+### `.FlushPages()`
 
 Returns: `N/A`.
 
@@ -136,7 +136,7 @@ Returns: `N/A`.
 
 Flushes all texture pages to cached memory.
 
-### `.flushPage()`
+### `.FlushPage()`
 
 Returns: `N/A`.
 
@@ -146,7 +146,7 @@ Returns: `N/A`.
 
 Flushes a texture page to cached memory.
 
-### `.prefetchPages()`
+### `.PrefetchPages()`
 
 Returns: `N/A`.
 
@@ -156,7 +156,7 @@ Returns: `N/A`.
 
 Loads all texture pages from cached memory.
 
-### `.prefetchPage(index)`
+### `.PrefetchPage(index)`
 
 Returns: `N/A`.
 
@@ -166,7 +166,7 @@ Returns: `N/A`.
 
 Loads a texture page from cached memory.
 
-### `.getImageInfo(identifier)`
+### `.GetImageInfo(identifier)`
 
 Returns: `image` or `undefined`.
 
@@ -176,7 +176,7 @@ Returns: `image` or `undefined`.
 
 Returns an immage, if one exists.
 
-### `.exists(identifier)`
+### `.Exists(identifier)`
 
 Returns: `boolean`.
 
@@ -186,7 +186,7 @@ Returns: `boolean`.
 
 Returns whether an image exists within the Collage instance or not.
 
-### `.getStatus()`
+### `.GetStatus()`
 
 Returns: `real`.
 
@@ -196,7 +196,7 @@ Returns: `real`.
 
 Returns the type of status, as per CollageStatus enum, from the Collage instance.
 
-### `.imagesToArray()`
+### `.ImagesToArray()`
 
 Returns: `array`.
 
@@ -206,7 +206,17 @@ Returns: `array`.
 
 Returns an array of all of the images that Collage instance has.
 
-### `.destroy()`
+### `.ImagesNamesToArray()`
+
+Returns: `array`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`N/A`|||
+
+Returns an array of all of the images that Collage instance has.
+
+### `.Destroy()`
 
 Returns: `N/A`.
 
