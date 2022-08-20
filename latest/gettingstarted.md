@@ -16,7 +16,14 @@
 We'll start by
 
 ```gml
-// Collage takes in: width, height, separation
+// Creating a new Collage instance
+// Collage optionally takes in: width, height, crop, separation, identifier
 texPage = new Collage();
+texPage.AddFile("test.png");
 
+// Getting image info
+image = texPage.GetImageInfo("test");
+
+// Renderin
+draw_image(image, 0, x, y);
 ```

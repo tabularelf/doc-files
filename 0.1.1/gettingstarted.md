@@ -18,7 +18,7 @@
 
 Additionally, wav files include adding in a whole buffer. Allowing you to utilize `buffer_load_async`.
 
-We'll start by
+We'll start 
 
 ```gml
 // Scans and adds all wavs to the database.
