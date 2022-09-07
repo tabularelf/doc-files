@@ -56,7 +56,7 @@ Returns: `String`
 |Name|Datatype|Purpose|
 |---|---|---|
 |`textEntry`| `String`| The textEntry you want to fetch.|
-|`[substring]`| `String/Real`| The text you want to replace, as per the Lexicon replace struct chr (Default is `["%", "%"]`).|
+|`[struct]`| `String/Real`| The struct you want to replace strings with, as per the Lexicon replace struct chr (Default is `["%", "%"]`).|
 
 A special variation of `lexicon_text`, that uses a struct in its place. It doesn't use the replace characters, but rather follows a very unique format. 
 New to v1.1.0 of Lexicon. All replace characters are instead variable names. i.e. `%variable_name%`
