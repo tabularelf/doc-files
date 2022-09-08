@@ -117,7 +117,7 @@ lexicon_index_declare_from_csv("locale.csv");
 
 ### **Definitions File**
 
-(If you prefer to use the definitions file, see [here](definitions.md)
+[Click here](definitions.md) for more on how the definitions format works.
 
 ```gml
 lexicon_index_definitions("definitions.json");
@@ -137,3 +137,5 @@ As for fetching text, you just need to do.
 // i.e. lexicon_text("game_intro_text");
 var _text = lexicon_text("text.entry");
 ```
+
+You can see more exampples of [`lexicon_text()`](text.md) and it's other functions.

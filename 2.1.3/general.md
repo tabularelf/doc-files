@@ -18,7 +18,7 @@ Returns: `N/A`
 |---|---|---|
 |`N/A`|||
 
-This will flush Lexicon's internal cache system for text pointers that have had their replacement characters replaced. For lexicon_text and lexicon_text_array, this is controlled via this setting for when things get cached. 
+This will flush Lexicon's internal cache system for text entries that have had their replacement characters replaced. 
 
 ### `lexicon_get_os_locale()`
 

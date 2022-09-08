@@ -8,7 +8,7 @@ Returns: `N/A`
 |---|---|---|
 |`N/A`|||
 
-This is only needed in the `Async - Save/Load` event for localization that is loaded in asynchronously.
+Used for Lexicon mostly. Allows you to add text entries to the current language/locale.
 
 ### `lexicon_entry_remove()`
 
@@ -18,7 +18,7 @@ Returns: `N/A`
 |---|---|---|
 |`N/A`|||
 
-Flushes cached text entries.
+Allows you to remove a text entry from the current language/locale.
 
 ### `lexicon_language_exists(language)`
 

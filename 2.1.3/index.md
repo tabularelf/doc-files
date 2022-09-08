@@ -1,5 +1,34 @@
 # Language/Locale
 
+
+### `lexicon_index_declare_from_csv(filePath)`
+| Name| Datatype| Purpose |
+| ------------- | ------------- |------------- |
+| filePath |`String`| Path to csv file |
+
+This will fetch all language entries from the CSV, auto-declaring them.
+If a language/locale already exists, this will instead add the file onto the language/locale.
+
+Example:
+```gml
+// Fetches all languages/locales from the locale.csv and declares them once.
+lexicon_index_declare_from_csv("locale.csv");
+```
+
+### `lexicon_index_declare_from_json(filePath)`
+| Name| Datatype| Purpose |
+| ------------- | ------------- |------------- |
+| filePath |`String`| Path to csv file |
+
+This will fetch the json file and auto-declare it.
+If a language/locale already exists, this will instead add the file onto the language/locale.
+
+Example:
+```gml
+// Fetches the languages/locale from the locale.json and declares it once.
+lexicon_index_declare_from_json("locale.json");
+```
+
 ### `lexicon_index_declare(language, locale, [fallbackLocale])`
 | Name| Datatype| Purpose |
 | ------------- | ------------- |------------- |

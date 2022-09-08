@@ -30,7 +30,7 @@ You're free to use, modify and contribute at your own will.
 
 # License
 
-Collage is under the [MIT License](https://github.com/tabularelf/Lexicon/blob/main/LICENSE).
+Lexicon is under the [MIT License](https://github.com/tabularelf/Lexicon/blob/main/LICENSE).
 
 # Credits
 
