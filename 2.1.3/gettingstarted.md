@@ -64,12 +64,12 @@ The format of these files are as follows:
 
 CSV:
 
-| Language | Languge Name | Language Name 2 |
-|------|------|------|
-| Locale | Locale A | ["Locale B", "Locale C"] |
-| text.entry| TextA | TextB |
+| Language | Comments | Languge Name | Language Name 2 |
+|------|------|------|------|
+| Locale |  | Locale A | ["Locale B", "Locale C"] |
+| text.entry| Anything under here won't be declared. | TextA | TextB |
 | ------------------ | This cell is forcefully ignored as of [`LEXICON_ROW_SEPERATOR`](configuration.md) | |
-| text.entry2| TextC | TextD |
+| text.entry2| | TextC | TextD |
 
 Lexicon will assign all locales in an array to the same Language Name. 
 
