@@ -4,7 +4,7 @@
 |---|---|---|
 |`LEXICON_DEBUG`|`false`|Enables Lexicons debugging (outputs specific errors or extra info to console).|
 |`LEXICON_USE_FIRST_ENTRY_ADDED`|`false`|Uses the first entry added automatically.|
-|`LEXICON_ROW_SEPERATOR`|`"------------------"`|Tells Lexicon which rows in a CSV format are comments and discards them.|
+|`LEXICON_ROW_SEPERATOR`|`"------------------"`|Tells Lexicon which rows in a CSV format are row separators and ignores them.|
 |`LEXICON_USE_CACHE`|`true`|Uses the cache system. Searching for strings that match the same arguments as they were called.|
 |`LEXICON_AUTO_GC_CACHE`|`true`|Whether to automatically run the cache garbage collection system or not.|
 |`LEXICON_USE_ADVANCE_CACHE`|`true`|Used for `lexicon_text_struct()`. Whether to include caching changing structs. Setting deprecated.|

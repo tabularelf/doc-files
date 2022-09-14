@@ -22,11 +22,11 @@ The format of these files are as follows:
 
 ```json
 {
-	"language": "Languge Name",
-	"locale": "locale",
+	"language": "English",
+	"locale": "en-US",
 	"text": {
-		"text.entry": "TextA",
-		"text.entry2": "TextB",
+		"dialogue.NPCBob.Greeting": "Hello there %player%!",
+		"dialogue.NPCBob.Goodbye": "Goodbye %player%!"
 	}
 }
 ```
@@ -35,11 +35,11 @@ The format of these files are as follows:
 
 ```json
 {
-	"language": "Languge Name",
-	"locale": ["Locale A", "Locale B"],
+	"language": "English",
+	"locale": ["en-US", "en-AU"],
 	"text": {
-		"text.entry": "TextA",
-		"text.entry2": "TextB",
+		"dialogue.NPCBob.Greeting": "Hello there %player%!",
+		"dialogue.NPCBob.Goodbye": "Goodbye %player%!"
 	}
 }
 ```
@@ -48,13 +48,14 @@ The format of these files are as follows:
 
 ```json
 {
-	"language": "Languge Name",
-	"locale": "locale",
+	"language": "English",
+	"locale": "en-US",
 	"text": {
-		"entry": "textA",
-		"entry2": "textB",
-		"moreEntries": {
-			"foo": "bar"
+		"dialogue": {
+			"NPCBob": {
+				"Greeting": "Hello there %player%!",
+				"Goodbye": "Goodbye %player%!"
+			}
 		}
 	}
 }
@@ -64,12 +65,12 @@ The format of these files are as follows:
 
 CSV:
 
-| Language | Comments | Languge Name | Language Name 2 |
+| Language | Comments | English | French |
 |------|------|------|------|
-| Locale |  | Locale A | ["Locale B", "Locale C"] |
-| text.entry| Anything under here won't be declared. | TextA | TextB |
+| Locale |  | ["en-US", "en-AU"] |  |
+| dialogue.NPCBob.Greeting | Anything under here won't be declared. | Hello there %player%! | TextB |
 | ------------------ | This cell is forcefully ignored as of [`LEXICON_ROW_SEPERATOR`](configuration.md) | |
-| text.entry2| | TextC | TextD |
+| dialogue.NPCBob.Goodbye | | Goodbye %player%! | TextD |
 
 Lexicon will assign all locales in an array to the same Language Name. 
 
@@ -138,4 +139,4 @@ As for fetching text, you just need to do.
 var _text = lexicon_text("text.entry");
 ```
 
-You can see more exampples of [`lexicon_text()`](text.md) and it's other functions.
+You can see more examples of [`lexicon_text()`](text.md) and it's other functions.
