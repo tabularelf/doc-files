@@ -39,7 +39,7 @@ Returns: `String`
 |---|---|---|
 |`N/A`|||
 
-This will set the replace character (default: `%s`) to whatever you desire.
+This will get the replace character (default: `%s`) to whatever you desire.
 
 ### `lexicon_replace_chr_set(chr)`
 
@@ -49,4 +49,4 @@ Returns: `N/A`
 |---|---|---|
 |`N/A`|||
 
-This will get the replace character (default: `%s`).
+This will set the replace character (default: `%s`).
