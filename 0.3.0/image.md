@@ -2,7 +2,7 @@
 
 ?> If `COLLAGE_IMAGES_MAKE_PUBLIC` is set to false, functions that take in a string as an identifier may not work for all functions.
 
-### `CollageCompatibilityGetImageUVs(identifier)`
+### `CollageImageGetUVsArray(identifier)`
 
 Returns: `array` or `undefined`.
 
@@ -12,7 +12,7 @@ Returns: `array` or `undefined`.
 
 Returns an array version of the UV information, for use with [`image_get_uvs()`](compatibility.md#image_get_uvssprite_indeximage-image_index)
 
-### `CollageGetImageInfo(identifier)`
+### `CollageImageGetInfo(identifier)`
 
 Returns: `struct` or `undefined`.
 
@@ -45,7 +45,7 @@ Returns: `struct`.
 
 Loads in an image from cache memory.
 
-### `CollageGetImageUVs(identifier, image_index)`
+### `CollageImageGetUVs(identifier, image_index)`
 
 Returns: instance of `__CollageImageUVsClass`.
 
@@ -56,18 +56,7 @@ Returns: instance of `__CollageImageUVsClass`.
 
 Returns the UV struct of an image.
 
-### `CollageCompatibilityGetImageUVs(identifier, image_index)`
-
-Returns: `array`.
-
-|Name|Datatype|Purpose|
-|---|---|---|
-|`identifier`|string/image|Name of image|
-|`image_index`|real|subimage of image|
-
-Returns an array of UV data that is setup similarily to how GMSprite `sprite_get_uvs()` works.
-
-### `CollageGetImageTexture(identifier, subImage)`
+### `CollageImageGetTexture(identifier, subImage)`
 
 Returns: `texturePointer`.
 
@@ -78,7 +67,7 @@ Returns: `texturePointer`.
 
 Gets the texture pointer of an image.
 
-### `CollageGetImageTexturePage(identifier, subImage)`
+### `CollageImageGetTexturePage(identifier, subImage)`
 
 Returns: `__CollageTexturePageClass`.
 
@@ -89,7 +78,7 @@ Returns: `__CollageTexturePageClass`.
 
 Gets the `__CollageTexturePageClass` of an image.
 
-### `CollageGetImageSurface(identifier, subImage)`
+### `CollageImageGetSurface(identifier, subImage)`
 
 Returns: `surfaceID`.
 

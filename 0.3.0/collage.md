@@ -202,7 +202,7 @@ Returns: `N/A`.
 
 Loads a texture page from cached memory.
 
-### `.GetImageInfo(identifier)`
+### `.ImageGetInfo(identifier)`
 
 Returns: `image` or `undefined`.
 

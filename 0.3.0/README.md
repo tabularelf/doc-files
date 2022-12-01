@@ -25,14 +25,9 @@ Collage is a texture page builder/packer and image manager, built from the groun
 
 # FAQ
 
-## **What are texture pages?**
-
-Texture pages (also known as texture atlases or spritesheets) are essentially one big image that contains multiple smaller images. The intended idea is to reduce the amount of memory swap needed by storing as much images as possible, onto as little texture pages as possible.
-Computers back in the old day worked with only power of two image sizes. But today texture pages can be any size. Though it's still common to see power of two texture pages. (Power of two as in 512x512, 1024x1024, 2048x2048, 4196x4196, etc.)
-
 ## **Why was Collage made?**
 
-Collage was designed in mind to work around the limitaitons of `sprite_add()` adding an entire texture page just for each and every sprite sub image, per sprite.<br>
+Collage was designed in mind to work around the limitaitons of `sprite_add()` adding an entire texture page just for each and every sprite sub image, per sprite.
 While also enabling the creation of texture pages on the fly. Collage is specifically designed to mimic GameMakers own texture page system, and thus works in much the same logic as GameMakers.
 
 ## **What could I use Collage for?**
@@ -49,7 +44,7 @@ Here are some examples of that you can use Collage for.<br>
 ## **Can Collage work with my existing project?**
 
 Collage is designed first and foremost to bridge as much compatibility as possible with your existing project, without requiring lots of reworking. 
-Just drop in Collage, replace all `draw_sprite*` functions with `draw_image*` equivilants and you're good to go!'
+Just drop in Collage, replace all `draw_sprite*` functions with `draw_image*` equivilants and you're good to go!
 
 ?> Collage doesn't currently work with `draw_self()`. A future compatibility may be introduced for this.
 

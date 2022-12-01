@@ -1,5 +1,12 @@
 # Getting Started
 
+## What are texture pages?
+
+Texture pages (also known as texture atlases) are essentially one big image that contains multiple smaller images. As your GPU can only hold onto so much information at a time, things are swapped out whenever needed. The intended use with texture pages, is to reduce the amount of memory swap needed by storing as much images as possible, onto as little texture pages as possible.
+Computers back in the old day worked with only power of two image sizes. But today texture pages can be any size. Though it's still common to see power of two texture pages. (Power of two as in 512x512, 1024x1024, 2048x2048, 4196x4196, etc.)
+
+While GameMaker does make and use texture pages, there's currently no way to create them on the fly via code. This is where Collage comes in.
+
 ## Installing
 1. Download Collage's .yymp from [releases!](https://github.com/tabularelf/Collage/releases)
 2. With your GameMaker Project, drag the .yymp (or at the top goto Tools -> Import Local Package)
@@ -13,8 +20,23 @@
 3. Reimport your [`__CollageConfig`](configuration.md) (if changes were made)
 
 ## Using Collage
-<p>Collage includes a variety of ways to adding images onto its texture pages.
+Collage includes a variety of ways to adding images onto its texture pages. We can begin by creating a new [`Collage`](collage.md#collageidentifier-width-height-crop-separation-optimization) instance.<br>
+```gml
+texPage = new Collage();
+```
+[`Collage`](collage.md#collageidentifier-width-height-crop-separation-optimization) includes a bunch of optional arguments, which most default to the values defined in [`__CollageConfig`](configuration.md). These configs are changeable from here:<br>
+- `__COLLAGE_DEFAULT_TEXTURE_SIZE`
+- `__COLLAGE_DEFAULT_CROP`
+- `__COLLAGE_DEFAULT_SEPARATION`
+- `__COLLAGE_DEFAULT_OPTIMIZE`
 
+The only one that's not included within the config is the `identifier` argument, which defaults to `undefined`. If declared, it can be used with [`CollageGet()`](general.md#collageget). In most cases, you do not need to specify any of these arguments.
+However you're free to include arguments if you need to either give it a name, or override the default values. (Such in cases where the game is moddable.) Giving us:
+```gml
+texPage = new Collage("Characters", 2048, 2048, false, 0, true);
+```
+
+## Adding Images to a Collage instance
 Here are some of the examples in which you can add images to Collage. (These were mostly taken/referenced from the project from the Github repo.)
 
 <!-- tabs:start -->
@@ -63,16 +85,16 @@ texPage.AddFileStrip("soldier_strip.png");
 texPage = new Collage();
 var _batSprite = sprite_add("bats.png", 1, false, false, 0, 0);
 var _array = [
-	CollageDefineSpriteSheet("_fly_down", 32, 0, 128, 32),
-	CollageDefineSpriteSheet("_fly_right", 32, 32, 128, 32),
-	CollageDefineSpriteSheet("_fly_up", 32, 64, 128, 32),
-	CollageDefineSpriteSheet("_fly_left", 32, 96, 128, 32),
-	CollageDefineSpriteSheet("_dead_down", 0, 0, 32, 32),
-	CollageDefineSpriteSheet("_dead_right", 0, 32, 32, 32),
-	CollageDefineSpriteSheet("_dead_up", 0, 64, 32, 32),
-	CollageDefineSpriteSheet("_dead_left", 0, 96, 32, 32),
+	CollageDefineSpriteForSheet("_fly_down", 32, 0, 128, 32),
+	CollageDefineSpriteForSheet("_fly_right", 32, 32, 128, 32),
+	CollageDefineSpriteForSheet("_fly_up", 32, 64, 128, 32),
+	CollageDefineSpriteForSheet("_fly_left", 32, 96, 128, 32),
+	CollageDefineSpriteForSheet("_dead_down", 0, 0, 32, 32),
+	CollageDefineSpriteForSheet("_dead_right", 0, 32, 32, 32),
+	CollageDefineSpriteForSheet("_dead_up", 0, 64, 32, 32),
+	CollageDefineSpriteForSheet("_dead_left", 0, 96, 32, 32),
 ];
-texPage.AddSpriteSheet(_batSprite, _array, "bat", 32, 32);
+texPage.AddSpriteSheet(_batSprite, _array, "bat", 32, 32, false, false, CollageOrigin.CENTER, CollageOrigin.CENTER);
 sprite_delete(_batSprite);
 ```
 
@@ -83,7 +105,7 @@ sprite_delete(_batSprite);
 ?> Each `.Add*` method has some additional parameters, which most are entirely optional. You can see more by reading their specific documentation under [Collage](collage.md).
 
 
-Once you've added your images, you can get their info via [`CollageGetImageInfo()`](image.md#collagegetimageinfoidentifier) or [`.GetImageInfo()`](collage.md#getimageinfoidentifier). Which you can then use to render the image.
+Once you've added your images, you can get their info via [`CollageImageGetInfo()`](image.md#collageimagegetinfoidentifier) or [`.ImageGetInfo()`](collage.md#imagegetinfoidentifier). Which you can then use to render the image.
 ```gml
 // Getting image info
 image = texPage.GetImageInfo("test");

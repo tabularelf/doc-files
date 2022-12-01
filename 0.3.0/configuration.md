@@ -9,7 +9,7 @@
 |`__COLLAGE_DEFAULT_TEXTURE_SIZE`|`2048`|The default texture page size.|
 |`__COLLAGE_SCALE_TO_TEXTURES_ON_PAGE`|`true`|Whether Collage should scale images that are bigger than the texture page itself.|
 |`__COLLAGE_RENDER_DEBUG_LINES`|`false`|Whether Collage should bake coloured boxes around all of the images or not. This is mostly used to determine that images are correctly fitting on the texture page, and otherwise serve no real purpose.|
-|`__COLLAGE_DEFAULT_CROP`|`true`|Whether Collage should autocrop any texture pages that weren't given a crop true/false value.|
+|`__COLLAGE_DEFAULT_CROP`|`1`|Whether Collage should autocrop any texture pages that weren't given a crop level. Values include:<br> 0: No cropping<br> 1: Crop all sides<br>  2: Crop horizontally<br>  3: Crop Vertically|
 |`__COLLAGE_DEFAULT_OPTIMIZE`|`true`|Whether Collage should autocrop any texture pages that weren't given a crop true/false value.|
 |`__COLLAGE_DEFAULT_SEPARATION`|`0`|Separation value that Collage will respect across the board if no sep value was passed.|
 |`__COLLAGE_IMAGE_NAME_COLLISION_HANDLE`|`0`|How Collage should handle image name collisions.<br>0: Reject all duplicate image names.<br>1: Allow replacing of existing images if they meet certain criteria (non-crop: width & height. crop: width & height & general minimal box area) or otherwise add as new image (with number).<br>2: Add as new image (with number).|

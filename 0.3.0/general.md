@@ -48,19 +48,19 @@ Returns: `Boolean`.
 
 Returns whether it's a valid Collage image instance or not.
 
-### `CollageDefineSpriteSheet(subname, startX, startY, endX, endY)`
+### `CollageDefineSpriteForSheet(subname, startX, startY, endX, endY)`
 
-Returns: `struct`.
+Returns: `array`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`subname`|`string`|Subname of sprite.|
+|`subname`|`string`|Subname of sprite to make from sprite sheet.|
 |`startX`|`real`|startX of sprite.|
 |`startY`|`real`|startY of sprite.|
 |`endX`|`real`|endX of sprite.|
 |`endY`|`real`|endY of sprite.|
 
-Returns a struct with the subname and positions to be later stored into an array and added via [`.AddSpriteSheet()`](collage.md#addspritesheetspriteid-spritearray-identifierstring-width-height-removeback-smooth-xorigin-yorigin-is3d)
+Returns an array with the subname and positions to be later stored within an array and added via [`.AddSpriteSheet()`](collage.md#addspritesheetspriteid-spritearray-identifierstring-width-height-removeback-smooth-xorigin-yorigin-is3d)
 
 ### `CollageIsPowerTwo(number)`
 

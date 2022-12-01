@@ -8,7 +8,8 @@
 
 **API Reference**
 - [General](general.md)
-- [Collage](collage.md)
+- [Collage()](collage.md)
+- [Collage Image](collage-image.md)
 - [GM-Collage Compatibility](compatibility.md)
 - [Image](image.md)
 - [Rendering](rendering.md)
