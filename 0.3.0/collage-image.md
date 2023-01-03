@@ -4,7 +4,7 @@ Each Collage Image Instance includes a few methods that can be used to retrieve 
 
 ### `.GetUVs(image_index)`
 
-Returns: `Collage UVs Struct.
+Returns: `Collage UVs Struct`
 
 |Name|Datatype|Purpose|
 |---|---|---|

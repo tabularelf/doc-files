@@ -10,6 +10,7 @@
 - [General](general.md)
 - [Collage()](collage.md)
 - [Collage Image](collage-image.md)
+- [Collage Image Batch](collage-image-batch.md)
 - [GM-Collage Compatibility](compatibility.md)
 - [Image](image.md)
 - [Rendering](rendering.md)

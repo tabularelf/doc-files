@@ -88,3 +88,13 @@ Returns: `surfaceID`.
 |`subImage`|real|Subimage of image.|
 
 Gets the surfaceID of an images texture page.
+
+### `CollageImageExists(identifier)`
+
+Returns: `boolean`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`identifier`|`string` or `__CollageImageClass`|The name or Collage Image struct you want to check.|
+
+Returns if the particular Collage image exists or not.

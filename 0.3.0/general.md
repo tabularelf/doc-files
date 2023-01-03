@@ -48,7 +48,7 @@ Returns: `Boolean`.
 
 Returns whether it's a valid Collage image instance or not.
 
-### `CollageDefineSpriteForSheet(subname, startX, startY, endX, endY)`
+### `CollageDefineSpriteSheet(subname, startX, startY, endX, endY)`
 
 Returns: `array`.
 
@@ -60,7 +60,7 @@ Returns: `array`.
 |`endX`|`real`|endX of sprite.|
 |`endY`|`real`|endY of sprite.|
 
-Returns an array with the subname and positions to be later stored within an array and added via [`.AddSpriteSheet()`](collage.md#addspritesheetspriteid-spritearray-identifierstring-width-height-removeback-smooth-xorigin-yorigin-is3d)
+Returns an array with the subname and positions to be later stored within an array and added via [`.AddSpriteSheet()`](collage.md#addspritesheetspriteid-spritearray-identifierstring-width-height-removeback-smooth-xorigin-yorigin-is3d). If you provide `{{name}}` anywhere within `subname`, `.AddSpriteSheet()` will replace it instead of adding it to the end. i.e. `"spr_{{name}}_idle_down"`, with the main name `"bob"`, would get replaced as `"spr_bob_idle_down"`. Whereas in all other instances, you'll have to do `"spr_bob"` for the name, and `"_idle_down"`, to get `"spr_bob_idle_down"`.
 
 ### `CollageIsPowerTwo(number)`
 
@@ -111,13 +111,3 @@ Returns: `N/A`.
 |`N/A`|||
 
 Restores the GPU states, matrices and shader from `CollageSterlizeGPUState()`.
-
-### `CollageGetRecommendedSize(sprite_array)`
-
-Returns: `real`.
-
-|Name|Datatype|Purpose|
-|---|---|---|
-|`sprite_array`|`array`|An array that contains all sprite indexes|
-
-Returns the recommended size from all of the sprites in the array, to create a Collage instance with.

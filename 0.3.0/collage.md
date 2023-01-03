@@ -115,7 +115,7 @@ Returns: `N/A`.
 
 ### `.AddSpriteSheet(spriteID, spriteArray, identifierString, width, height, [removeBack], [smooth], [xorigin], [yorigin], [is3D])`
 
-Converts a sprite into multiple smaller sprites. Used in cases where you have an already assembled sprite sheet and want to splice it up.
+Converts a sprite into multiple smaller sprites. Used in cases where you have an already assembled sprite sheet and want to splice it up. The `name` property may either be at the start of each image name, or replacing `{{name}}`. See [`CollageDefineSpriteSheet()`](general.md#collagedefinespritesheetsubname-startx-starty-endx-endy) for more info.
 
 Returns: `N/A` (or `SpriteData Struct` if Collage Build State is `BATCHING`).
 
