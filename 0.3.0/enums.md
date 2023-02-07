@@ -33,3 +33,13 @@ Mainly used to determine whether Collage is ready to build images or not.
 |`.BATCHING`|Collage is in batch building mode.|
 
 Mainly used to determine whether Collage batching a bunch of images currently or not.
+
+### `CollageRPStatus`
+
+|Name|Purpose|
+|---|---|
+|`.EMPTY`|Collage Render Pipeline is empty.|
+|`.BATCHING`|Collage Render Pipeline is in batch building mode.|
+|`.BATCHED`|Collage Render Pipeline has been batched and contains data.|
+
+Mainly used to determine what kind of state Collage Render Pipeline is in.

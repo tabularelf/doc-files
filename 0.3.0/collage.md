@@ -132,7 +132,7 @@ Returns: `N/A` (or `SpriteData Struct` if Collage Build State is `BATCHING`).
 |`[yorigin]`|`real`|yoffset of image.  (Default `0`) You may use [`CollageOrigin`](enums.md#collageorigin) to define your origin instead.|
 |`[is3D]`|`boolean`|Whether image should have its own texture page, regardless of size. (Default `false`)|
 
-### `.FreePages()`
+### `.Clear()`
 
 Returns: `N/A`.
 
@@ -140,7 +140,7 @@ Returns: `N/A`.
 |---|---|---|
 |`N/A`|||
 
-Frees the texture pages (and images).
+Frees the texture pages (and images). Allowing for this Collage instance to be reused.
 
 ### `.GetPage()`
 

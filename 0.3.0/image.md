@@ -29,7 +29,7 @@ Returns: `boolean`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`identifier`|string|Name of image.|
+|`identifier`|string/image|Name of image.|
 |`subImage`|real|Subimage of image.|
 
 Checks whether the image is loaded or not.

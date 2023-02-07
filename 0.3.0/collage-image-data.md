@@ -1,4 +1,4 @@
-# Collage Image Batch
+# Collage Image Data
 
 While in batch mode, any images added via the `.Add*` methods from [Collage()](collage.md) will return the underlying struct that Collage added to its batch queue. This enables a few additional properties that can be applied before packing.
 

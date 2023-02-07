@@ -15,5 +15,6 @@
 |`__COLLAGE_IMAGE_NAME_COLLISION_HANDLE`|`0`|How Collage should handle image name collisions.<br>0: Reject all duplicate image names.<br>1: Allow replacing of existing images if they meet certain criteria (non-crop: width & height. crop: width & height & general minimal box area) or otherwise add as new image (with number).<br>2: Add as new image (with number).|
 |`__COLLAGE_IMAGES_ARE_PUBLIC`|`true`|Whether Collage should make all images added available through the global image database or not. The upside to this is that you can use string-based values in certain functions that allow it to fetch from a global database. The downside is that you can't have the same names across multiple Collages. Setting this to false will allow all image names to be used privately, but not accessible via the global image database.|
 |`__COLLAGE_BUILDER_VRAM_CLEAR`|`false`|Enables verbose console output to aid with debugging.|
-|`__COLLAGE_STRETCHED_RESPECT_ORIGIN`|Whether Collage should respect the origin of the image or not.<br>By default this is false to match GameMaker's behaviour.|`false`|
+|`__COLLAGE_STRETCHED_RESPECT_ORIGIN`|Whether Collage should respect the origin of the image or not when drawing stretched.<br>By default this is false to match GameMaker's behaviour.|`false`|
+|`__COLLAGE_PART_RESPECT_ORIGIN`|Whether Collage should respect the origin of the image or not when drawing part.<br>By default this is false to match GameMaker's behaviour.|`false`|
 |`__COLLAGE_VERBOSE`|`false`|Enables verbose console output to aid with debugging.|

@@ -10,7 +10,10 @@
 - [General](general.md)
 - [Collage()](collage.md)
 - [Collage Image](collage-image.md)
-- [Collage Image Batch](collage-image-batch.md)
-- [GM-Collage Compatibility](compatibility.md)
+- [Collage Image Data](collage-image-data.md)
 - [Image](image.md)
-- [Rendering](rendering.md)
+---
+**Rendering**
+- [GM-Collage Compatibility](compatibility.md)
+- [CollageDraw](rendering.md)
+- [CollageRenderPipeline()](collage-render-pipeline.md)
