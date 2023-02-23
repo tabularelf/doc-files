@@ -15,7 +15,13 @@
     <script type="text/javascript" src="config.js"></script>
 </head>
 <body>
-    <div id="app">
+    <div id="app">	
+		<script>
+		// Service worker
+		if (typeof navigator.serviceWorker !== 'undefined') {
+			navigator.serviceWorker.register('sw.js')
+		}
+		</script>
         <script>
             document.title = config.name + ' Documentation';
             // SET META DESCRIPTION
