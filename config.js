@@ -1,7 +1,7 @@
 const config = {
-	name: 'Collage',
-	description: 'Texture Page Builder for GameMaker',
-	latestVersion: '0.3.0',
+	name: 'Canvas',
+	description: 'Non-voliate surfaces for GameMaker',
+	latestVersion: '2.0.0',
 	otherVersions: [],
 	favicon: 'assets/favicon.ico',
 };
