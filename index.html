@@ -18,9 +18,12 @@
     <div id="app">	
 		<script>
 		// Service worker
-		if (typeof navigator.serviceWorker !== 'undefined') {
-			navigator.serviceWorker.register('sw.js')
-		}
+        if (!(location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "")) {
+		    if (typeof navigator.serviceWorker !== 'undefined') {
+                console.log("Registiner sw.js!");
+			    navigator.serviceWorker.register('sw.js');
+		    }
+        }
 		</script>
         <script>
             document.title = config.name + ' Documentation';
