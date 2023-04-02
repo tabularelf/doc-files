@@ -148,3 +148,23 @@ Returns: `self`.
 |`N/A`|||
 
 Clears data. 
+
+### `.Cache()`<br>
+
+Returns: `self`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`N/A`|||
+
+Caches the buffer, freeing the surface.
+
+### `.Restore()`<br>
+
+Returns: `self`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`N/A`|||
+
+Restores the buffer from the cache and the surface.
