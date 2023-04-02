@@ -16,4 +16,4 @@ Returns: An instance of `Canvas`.
 |---|---|---|
 |`newAppSurf`|`Boolean`|Whether to return the global Canvas `application_surface`, or to create a new Canvas instance with a copy of the `application_surface` contents.|
 
-Returns `true` if it's a Canvas instance, `false` if it's not.
+Returns an instance of `Canvas` that contains the current `application_surface` data as a handy helper. Setting the argument to `true` (defaulse `false`) will instead create a new `Canvas` with the current contents of `application_surface` at the time.

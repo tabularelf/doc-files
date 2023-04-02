@@ -137,7 +137,7 @@ Returns: `Boolean`.
 |---|---|---|
 |`N/A`|||
 
-Determines if the Canvas has some kind of data, and isn't in use.
+Returns `true` if the Canvas has some kind of data, and isn't in use. Or `false`.
 
 ### `.Clear()`<br>
 
