@@ -8,7 +8,17 @@
 
 ---
 
-TBA
+Canvas is a non-volatile surface solution for GameMaker, by keeping buffer copies of surfaces and automatically refreshing surfaces on demand.
+
+# Features
+- Copy of surface contents between each `.Finish()` and `.UpdateCache()` call.
+- Built-in low performance garbage collector for each Canvas instance.
+- Control over when and where the buffer caching happens.
+- Saving and loading buffer versions of surfaces.
+- Fetch pixel data from the buffer cache (including the new surface formats).
+- Per Canvas instance surface depth toggable (or globally affected via `surface_get_disabled_depth()` upon new Canvas instance).
+- Interface with `application_surface` as a Canvas instance.
+- Smart resizing of Canvases.
 
 # Supported Platforms
 

@@ -41,5 +41,5 @@ To free the Canvas from memory at any time, you would just call `.Free()` to fre
 ```gml
 surf.Free();
 ```
-The Canvas struct itself will then be garbage collected, or can be reused.
+The Canvas struct itself will then be garbage collected once dereferenced, or can be reused.
 Otherwise, Canvas also contains it's own garbage collector, that works a very small amount inbetween frames, and frees up Canvas instances that have lost all references.

@@ -59,11 +59,13 @@ Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`Width`|`Real`|Width that you'd like to resize the Canvas to.|
+|`Height`|`Real`|Height that you'd like to resize the Canvas to.|
+|`keepData`|`Boolean`|Whether to keep the existing surface data or not. Default is `false`.|
 
-Sets the width and height of the Canvas. If `[keepData]` is set to `true`, it will also maintain the current data.
-Note: This will also free the surface/buffer context as they're now both invalid data.
-Additional note: `[keepData]` currently does not work properly on HTML5, so it has been forcedfully switched off.
+Sets the width and height of the Canvas. If `[keepData]` is set to `true`, it will also maintain the current data. If the width and height is the same as the Canvas width and height, then nothing happens.
+
+?> `[keepData]` currently does not work properly on HTML5, so it has been forcedfully switched off.
 
 ### `.CopySurface(surfaceID, x, y, [forceResize], [updateCache])`<br>
 
@@ -71,7 +73,11 @@ Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`surfaceID`|`Surface ID`| Surface ID that you want to copy from.|
+|`x`|`Real`| X pos that you want to copy to.|
+|`y`|`Real`| Y pos that you want to copy to.|
+|`forceResize`|`Boolean`| Whether to forcefully resize the surface or not. Default is `false`.|
+|`updateCache`|`Boolean`| Whether to forcefully update the cache or not. Default is state of cache writing as per `.SetWriteToCache()`.|
 
 Copies one surface to the Canvas surface, as per `surface_copy()`. <br>
 If `[forceResize]` is set to `true` (default is `false`), it will also resize the surface/buffer prior to copying the surface as per `x + width`, `y + height`. <br>
@@ -83,7 +89,15 @@ Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`surfaceID`|`Surface ID`| Surface ID that you want to copy from.|
+|`x`|`Real`| X pos that you want to copy to.|
+|`y`|`Real`| Y pos that you want to copy to.|
+|`xs`|`Real`| X pos that you want to copy from source.|
+|`ys`|`Real`| Y pos that you want to copy from source.|
+|`ws`|`Real`| Width that you want to copy from source.|
+|`hs`|`Real`| Height that you want to copy from source.|
+|`forceResize`|`Boolean`| Whether to forcefully resize the surface or not. Default is `false`.|
+|`updateCache`|`Boolean`| Whether to forcefully update the cache or not. Default is state of cache writing as per `.SetWriteToCache()`.|
 
 Same as above, except also takes in a few additional arguments for copying parts of a surface.
 
@@ -93,7 +107,11 @@ Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`canvas`|`Canvas Instance`| Canvas instance that you want to copy from.|
+|`x`|`Real`| X pos that you want to copy to.|
+|`y`|`Real`| Y pos that you want to copy to.|
+|`forceResize`|`Boolean`| Whether to forcefully resize the surface or not. Default is `false`.|
+|`updateCache`|`Boolean`| Whether to forcefully update the cache or not. Default is state of cache writing as per `.SetWriteToCache()`.|
 
 Same as `.CopySurface()`, but copies a Canvas surface instead.
 
@@ -103,7 +121,15 @@ Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`canvas`|`Canvas Instance`| Canvas instance that you want to copy from.|
+|`x`|`Real`| X pos that you want to copy to.|
+|`y`|`Real`| Y pos that you want to copy to.|
+|`xs`|`Real`| X pos that you want to copy from source.|
+|`ys`|`Real`| Y pos that you want to copy from source.|
+|`ws`|`Real`| Width that you want to copy from source.|
+|`hs`|`Real`| Height that you want to copy from source.|
+|`forceResize`|`Boolean`| Whether to forcefully resize the surface or not. Default is `false`.|
+|`updateCache`|`Boolean`| Whether to forcefully update the cache or not. Default is state of cache writing as per `.SetWriteToCache()`.|
 
 Same as `.CopySurfacePart()`, but copies a Canvas surface instead.
 
@@ -139,15 +165,16 @@ Returns: `Boolean`.
 
 Returns `true` if the Canvas has some kind of data, and isn't in use. Or `false`.
 
-### `.Clear()`<br>
+### `.Clear([colour], [alpha])`<br>
 
 Returns: `self`.
 
 |Name|Datatype|Purpose|
 |---|---|---|
-|`N/A`|||
+|`Colour`|`Real`| Sets the colour to clear with. Default is `c_black`.|
+|`Alpha`|`Real`| Sets the alpha to clear with. Default is `0`.|
 
-Clears data. 
+Clears the surface and buffer contents, overwriting it with the contents of the colour and alpha specified.
 
 ### `.Cache()`<br>
 
@@ -168,3 +195,13 @@ Returns: `self`.
 |`N/A`|||
 
 Restores the buffer from the cache and the surface.
+
+### `.SaveAsImage(filename)`<br>
+
+Returns: `self`.
+
+|Name|Datatype|Purpose|
+|---|---|---|
+|`filename`|`String`|The name of the file to save as.|
+
+Saves the current Canvas as a `png` file.
